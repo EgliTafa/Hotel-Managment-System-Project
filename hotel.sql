@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 17, 2023 at 05:23 PM
--- Server version: 10.4.25-MariaDB
--- PHP Version: 8.1.10
+-- Generation Time: Apr 17, 2023 at 10:47 PM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -38,35 +38,35 @@ CREATE TABLE `dhoma` (
   `balcony` enum('yes','no') NOT NULL,
   `floor` int(11) NOT NULL,
   `pets` enum('yes','no') NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `dhoma`
 --
 
 INSERT INTO `dhoma` (`roomID`, `roomNo`, `type`, `beds`, `capacity`, `price`, `internet`, `balcony`, `floor`, `pets`) VALUES
-(1, 1, 'standard', 1, 3, '15000.00', 'yes', 'no', 2, 'no'),
-(2, 1, 'standard', 1, 3, '15000.00', 'yes', 'no', 2, 'no'),
-(3, 1, 'standard', 1, 3, '15000.00', 'yes', 'no', 3, 'no'),
-(4, 1, 'standard', 1, 3, '15000.00', 'yes', 'no', 3, 'no'),
-(5, 1, 'standard', 1, 3, '15000.00', 'yes', 'no', 4, 'no'),
-(6, 2, 'family', 3, 5, '22000.00', 'yes', 'yes', 3, 'yes'),
-(7, 2, 'family', 3, 5, '22000.00', 'yes', 'yes', 4, 'yes'),
-(8, 2, 'family', 3, 5, '22000.00', 'yes', 'yes', 2, 'yes'),
-(9, 2, 'family', 3, 5, '22000.00', 'yes', 'yes', 3, 'yes'),
-(11, 1, 'single', 1, 1, '8000.00', 'yes', 'no', 3, 'no'),
-(12, 1, 'single', 1, 1, '8000.00', 'yes', 'no', 4, 'no'),
-(13, 1, 'single', 1, 1, '8000.00', 'yes', 'no', 2, 'no'),
-(14, 1, 'single', 1, 1, '8000.00', 'yes', 'no', 4, 'no'),
-(15, 1, 'single', 1, 1, '8000.00', 'yes', 'no', 4, 'no'),
-(17, 1, 'couple', 1, 2, '13000.00', 'yes', 'yes', 2, 'no'),
-(18, 1, 'couple', 1, 2, '13000.00', 'yes', 'yes', 2, 'no'),
-(19, 1, 'couple', 1, 2, '13000.00', 'yes', 'yes', 3, 'no'),
-(20, 1, 'couple', 1, 2, '13000.00', 'yes', 'yes', 3, 'no'),
-(21, 1, 'couple', 1, 2, '13000.00', 'yes', 'yes', 4, 'no'),
-(22, 2, 'suite', 4, 7, '30000.00', 'yes', 'yes', 5, 'yes'),
-(23, 2, 'suite', 4, 7, '30000.00', 'yes', 'yes', 5, 'yes'),
-(24, 3, 'presidential suite', 5, 10, '40000.00', 'yes', 'yes', 6, 'yes');
+(1, 1, 'standard', 1, 3, 15000.00, 'yes', 'no', 2, 'no'),
+(2, 1, 'standard', 1, 3, 15000.00, 'yes', 'no', 2, 'no'),
+(3, 1, 'standard', 1, 3, 15000.00, 'yes', 'no', 3, 'no'),
+(4, 1, 'standard', 1, 3, 15000.00, 'yes', 'no', 3, 'no'),
+(5, 1, 'standard', 1, 3, 15000.00, 'yes', 'no', 4, 'no'),
+(6, 2, 'family', 3, 5, 22000.00, 'yes', 'yes', 3, 'yes'),
+(7, 2, 'family', 3, 5, 22000.00, 'yes', 'yes', 4, 'yes'),
+(8, 2, 'family', 3, 5, 22000.00, 'yes', 'yes', 2, 'yes'),
+(9, 2, 'family', 3, 5, 22000.00, 'yes', 'yes', 3, 'yes'),
+(11, 1, 'single', 1, 1, 8000.00, 'yes', 'no', 3, 'no'),
+(12, 1, 'single', 1, 1, 8000.00, 'yes', 'no', 4, 'no'),
+(13, 1, 'single', 1, 1, 8000.00, 'yes', 'no', 2, 'no'),
+(14, 1, 'single', 1, 1, 8000.00, 'yes', 'no', 4, 'no'),
+(15, 1, 'single', 1, 1, 8000.00, 'yes', 'no', 4, 'no'),
+(17, 1, 'couple', 1, 2, 13000.00, 'yes', 'yes', 2, 'no'),
+(18, 1, 'couple', 1, 2, 13000.00, 'yes', 'yes', 2, 'no'),
+(19, 1, 'couple', 1, 2, 13000.00, 'yes', 'yes', 3, 'no'),
+(20, 1, 'couple', 1, 2, 13000.00, 'yes', 'yes', 3, 'no'),
+(21, 1, 'couple', 1, 2, 13000.00, 'yes', 'yes', 4, 'no'),
+(22, 2, 'suite', 4, 7, 30000.00, 'yes', 'yes', 5, 'yes'),
+(23, 2, 'suite', 4, 7, 30000.00, 'yes', 'yes', 5, 'yes'),
+(24, 3, 'presidential suite', 5, 10, 40000.00, 'yes', 'yes', 6, 'yes');
 
 -- --------------------------------------------------------
 
@@ -78,7 +78,7 @@ CREATE TABLE `dhoma_foto` (
   `photoID` int(11) NOT NULL,
   `roomID` int(11) NOT NULL,
   `photo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `dhoma_foto`
@@ -119,7 +119,7 @@ CREATE TABLE `events` (
   `description` longtext NOT NULL,
   `Title` varchar(60) DEFAULT NULL,
   `image` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `events`
@@ -140,7 +140,36 @@ INSERT INTO `events` (`eventID`, `description`, `Title`, `image`) VALUES
 CREATE TABLE `gallery` (
   `pic_id` int(11) NOT NULL,
   `photo` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `gallery`
+--
+
+INSERT INTO `gallery` (`pic_id`, `photo`) VALUES
+(1, '/hotel/roomImages/couples1.jpg'),
+(2, '/hotel/roomImages/couples2.jpg'),
+(3, '/hotel/roomImages/couples3.jpg'),
+(4, '/hotel/roomImages/couples4.jpg'),
+(5, '/hotel/roomImages/couples5.jpg'),
+(6, '/hotel/roomImages/family1.jpg'),
+(7, '/hotel/roomImages/fm2.jpg'),
+(8, '/hotel/roomImages/fm3.jpg'),
+(9, '/hotel/roomImages/fm4.jpg'),
+(10, '/hotel/roomImages/KennedyRoom.jpg'),
+(11, '/hotel/roomImages/single1.jpg'),
+(12, '/hotel/roomImages/single2.jpg'),
+(13, '/hotel/roomImages/single3.jpg'),
+(14, '/hotel/roomImages/single4.jpg'),
+(15, '/hotel/roomImages/single5.jpg'),
+(16, '/hotel/roomImages/single6.jpg'),
+(17, '/hotel/roomImages/st2.jpg'),
+(18, '/hotel/roomImages/st3.jpg'),
+(19, '/hotel/roomImages/st4.jpg'),
+(20, '/hotel/roomImages/st5.jpg'),
+(21, '/hotel/roomImages/standard1.jpg'),
+(22, '/hotel/roomImages/suite1.jpg'),
+(23, '/hotel/roomImages/suite2.jpg');
 
 -- --------------------------------------------------------
 
@@ -154,7 +183,7 @@ CREATE TABLE `klient` (
   `lname` varchar(255) NOT NULL,
   `tel` varchar(20) DEFAULT NULL,
   `email` varchar(255) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `klient`
@@ -181,16 +210,16 @@ CREATE TABLE `rezervim` (
   `checkOut` date DEFAULT NULL,
   `guests` int(11) NOT NULL,
   `price` decimal(7,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `rezervim`
 --
 
 INSERT INTO `rezervim` (`resID`, `roomID`, `clientID`, `resDate`, `checkIn`, `checkOut`, `guests`, `price`) VALUES
-(3, 2, 5, '2023-04-15', '2023-04-15', '2023-04-17', 3, '30000.00'),
-(4, 2, 6, '2023-04-15', '2023-04-15', '2023-04-16', 2, '15000.00'),
-(8, 17, 9, '2023-04-17', '2023-04-20', '2023-04-23', 1, '39000.00');
+(3, 2, 5, '2023-04-15', '2023-04-15', '2023-04-17', 3, 30000.00),
+(4, 2, 6, '2023-04-15', '2023-04-15', '2023-04-16', 2, 15000.00),
+(8, 17, 9, '2023-04-17', '2023-04-20', '2023-04-23', 1, 39000.00);
 
 -- --------------------------------------------------------
 
@@ -207,7 +236,7 @@ CREATE TABLE `staf` (
   `tel` varchar(20) DEFAULT NULL,
   `roli` enum('user','admin') NOT NULL,
   `profile_pic` text DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `staf`
@@ -295,7 +324,7 @@ ALTER TABLE `events`
 -- AUTO_INCREMENT for table `gallery`
 --
 ALTER TABLE `gallery`
-  MODIFY `pic_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `pic_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `klient`

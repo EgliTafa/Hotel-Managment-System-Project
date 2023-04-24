@@ -3,6 +3,7 @@
 
 <head>
 	<title>Galeria e Imazheve</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<style>
 		.gallery {
 			display: flex;
@@ -60,6 +61,14 @@
 			transform: translate(-50%, -50%);
 		}
 
+		button{
+			display: block;
+		}
+
+		img{
+			display: block;
+		}
+
 		.close {
 			position: absolute;
 			top: 20px;
@@ -115,11 +124,35 @@
 
 		if (mysqli_num_rows($result) > 0) {
 			while ($row = mysqli_fetch_assoc($result)) {
+				echo '<div style="display:block; width:250px; height:250px;">';
+				echo '<form method="POST" action="">';
+				echo '<input type="hidden" name="photo" value="' . $row["photo"] . '">';
+				echo '<button class="fa fa-button" type="submit" name="delete"><i class="fa fa-trash"></i></button>';
+				echo '</form>';
 				echo '<img src="' . $row["photo"] . '" alt="Imazhi">';
+				echo '<form method="POST" action="">';
+				echo '</form>';
+				echo '</div>';
 			}
+			
+			  
 		} else {
 			echo "0 results";
 		}
+		
+		if (isset($_POST['delete'])) {
+			$photo = $_POST['photo'];
+			$sql = "DELETE FROM gallery WHERE photo = '$photo'";
+			if (mysqli_query($conn, $sql)) {
+			  // mesazh per sukses
+			  header('Location: ' . $_SERVER['PHP_SELF']); 
+			} else {
+			  // mesazh per gabim
+			}
+		  }
+		  
+		  
+		  
 
 		mysqli_close($conn);
 		?>

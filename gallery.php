@@ -86,10 +86,10 @@
 	<div class="crud-form">
 		<form action="" method="post" enctype="multipart/form-data">
 			<div class="form-group">
-				<label for="photo">Upload Photo</label>
+				<label for="photo">Ngarkoni Foto</label>
 				<input type="file" name="photo" id="photo" class="form-control-file">
 			</div>
-			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+			<button type="submit" name="submit" class="btn btn-primary">Ngarko</button>
 		</form>
 	</div>
 
